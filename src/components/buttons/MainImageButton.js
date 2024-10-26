@@ -2,8 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome"
 import { StyleSheet, TouchableHighlight } from "react-native"
 
 
-export function MainImageButton({icon}) {
-  return <TouchableHighlight style={styles.mainButton}>
+export function MainImageButton({icon, navigation, page}) {
+  return <TouchableHighlight style={styles.mainButton} onPress={() => navigation.navigate(page)}>
     <FontAwesomeIcon icon={icon} color={'#fafafa'} size={48} />
   </TouchableHighlight>
 }

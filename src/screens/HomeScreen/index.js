@@ -7,18 +7,18 @@ import styles from "./styles";
 import { MainImageButton } from "../../components/buttons";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <View>
           <View style={styles.buttonPair}>
-            <MainImageButton icon={faDatabase}/>
-            <MainImageButton icon={faBook}/>
+            <MainImageButton icon={faBrain} navigation={navigation} page="Exercises" />
+            <MainImageButton icon={faChartLine} navigation={navigation} page="Statistics" />
           </View>
           <View style={styles.buttonPair}>
-            <MainImageButton icon={faBrain}/>
-            <MainImageButton icon={faChartLine}/>
+            <MainImageButton icon={faDatabase} navigation={navigation} page="Database" />
+            <MainImageButton icon={faBook} navigation={navigation} page="Stories" />
           </View>
         </View>
       </SafeAreaView>
